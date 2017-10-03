@@ -7,4 +7,14 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: 'build/',
   },
+  module: {
+    rules: [
+      {
+        use: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/,
+      }
+    ]
+  },
+  devtool: 'eval-source-map',
 };
